@@ -1,4 +1,4 @@
-package com.example.springboot_nyano;
+package com.andev;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
