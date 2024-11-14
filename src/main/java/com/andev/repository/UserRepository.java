@@ -2,6 +2,8 @@ package com.andev.repository;
 
 import com.andev.entity.user.UserEntity;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Modifying;
@@ -13,6 +15,10 @@ import java.util.List;
 // Annotation
 //@RepositoryDefinition(domainClass = UserEntity.class, idClass = Long.class)
 public interface UserRepository extends JpaRepository<UserEntity,Long> , JpaSpecificationExecutor<UserEntity> {
+    // use pageable
+    Page<UserEntity> findByUserName(String name, Pageable pageable);
+    Page<UserEntity> findByUserNameContaining(String name, Pageable pageable);
+
     // exp: find userName vs userEmail
     // findByUserNameAndUserEmail
     // UserNameAndUserEmail
