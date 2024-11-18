@@ -1,4 +1,4 @@
-package com.andev.controller;
+package com.andev.controller.user;
 
 import com.andev.entity.user.UserEntity;
 import com.andev.service.UserService;
