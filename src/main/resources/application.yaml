@@ -18,8 +18,8 @@ spring:
   mail:
     host: sandbox.smtp.mailtrap.io
     port: 465
-    username: xxxx
-    password: xxxx
+    username: 97fc9f7d09e7b6
+    password: 0390082ad0ad90
     default-encoding: UTF-8
     properties:
       mail:
@@ -31,3 +31,13 @@ spring:
           ssl:
 #            enable: true
             trust: sandbox.smtp.mailtrap.io
+  kafka:
+    bootstrap-servers: localhost:19092
+    consumer:
+      group-id: otp-group-id
+      # consumer sẽ đọc từ offset đầu tiên (cũ nhất) trong partition. Đảm bảo comsumer không bỏ qua bất kì message nào
+      # ,ngay cả khi nó chưa bao giờ được tiêu thụ từ partition
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+
+

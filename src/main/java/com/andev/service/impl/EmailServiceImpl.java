@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-    private static final String EMAIL_HOST = "xxxx";
+    private static final String EMAIL_HOST = "anbui.academic@gmail.com";
 
     @Autowired
     private JavaMailSender javaMailSender;
